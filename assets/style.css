@@ -12,19 +12,23 @@
   --rule: #e5e5e5;
 }
 
-/* Dark theme variables (applied when body has .dark) */
+/* ---------- Dark theme variables (applied when html has .dark) ---------- */
 html.dark {
-  --bg: #1a1a1a;
+  --bg: #1b1d1e;
   --fg: #e5e5e5;
   --muted: #9ca3af;
-  --accent: #34d399;   /* same accent */
+  --accent: #34d399;
   --rule: #2a2a2a;
 }
 
 /* ---------- Base ---------- */
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-html, body { height: 100%; }
+html, body {
+  height: 100%;
+}
 
 body {
   margin: 0;
@@ -37,12 +41,18 @@ body {
   margin-inline: auto;
 }
 
-/* images never overflow */
-img, video { max-width: 100%; height: auto; }
+/* Prevent images and videos from overflowing */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
 
-/* Respect reduced motion */
+/* Accessibility: respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  * { transition: none !important; animation: none !important; }
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
 }
 
 /* ---------- Header ---------- */
@@ -59,7 +69,7 @@ header h1 {
   color: var(--accent);
 }
 
-/* Title link: no blue, no underline */
+/* Title link: clean look, no underline or color change */
 header h1 a,
 header h1 a:visited,
 header h1 a:hover,
@@ -79,11 +89,11 @@ nav a:visited {
 nav a:hover,
 nav a:focus-visible {
   text-decoration: none;
-  opacity: 0.8;            /* subtle feedback without underline */
+  opacity: 0.8;
   transition: opacity .15s ease-in-out;
 }
 
-/* ---------- Global links (remove all underlines) ---------- */
+/* ---------- Global links ---------- */
 a,
 a:visited {
   color: var(--accent);
@@ -122,7 +132,7 @@ h2 {
   margin-top: 2rem;
 }
 
-/* ---------- Content Links (no dotted underlines) ---------- */
+/* ---------- Content Links ---------- */
 .intro a,
 .writing a {
   color: var(--accent);
@@ -161,7 +171,7 @@ footer {
   font-size: 0.9rem;
 }
 
-/* ---------- Back to Home link (accent, no underline) ---------- */
+/* ---------- Back to Home link ---------- */
 .back-home,
 .back-home:visited {
   color: var(--accent);

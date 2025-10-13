@@ -14,18 +14,6 @@ layout: default
     {% endif %}
   </p>
 
-  {%- capture _toc -%}
-* TOC
-{:toc}
-  {%- endcapture -%}
-
-  {%- if page.content contains '# ' or page.content contains '## ' or page.content contains '<h1' or page.content contains '<h2' -%}
-  <nav class="toc">
-    <h3>Table of Contents</h3>
-    {{ _toc | markdownify }}
-  </nav>
-  {%- endif -%}
-
   {{ content }}
 
   <p><a href="{{ '/' | relative_url }}" class="back-home">← Back to Home</a></p>

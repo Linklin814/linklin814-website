@@ -2,7 +2,7 @@ name: Build and Deploy Jekyll
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]   # your repo uses master
   workflow_dispatch:
 
 permissions:
@@ -20,20 +20,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0   # <-- IMPORTANT! full git history required
-      - uses: actions/setup-ruby@v1
+          fetch-depth: 0   # needed for last-modified dates
+      - uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.2'
-      - name: Install dependencies
-        run: |
-          gem install bundler
-          bundle install --path vendor/bundle
-      - name: Build Jekyll site
-        run: bundle exec jekyll build
+          bundler-cache: true
+      - name: Build with Jekyll
+        run: bundle exec jekyll build --trace
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./_site
+          path: _site
 
   deploy:
     needs: build

@@ -22,7 +22,11 @@
 </head>
 <body class="">
   <header>
-    <h1><a href="{{ '/' | relative_url }}">🌵 {{ site.title }}</a></h1>
+    <h1>
+      <a href="{{ '/' | relative_url }}" class="site-logo">
+      <img src="{{ '/assets/logo.svg' | relative_url }}" alt="Cactus logo" class="logo-icon" />
+      {{ site.title }}
+    </h1>
     <button id="theme-toggle" class="theme-toggle">☾</button>
   </header>
 

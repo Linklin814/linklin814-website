@@ -125,3 +125,40 @@ body.dark {
   color: var(--fg);
   border-color: var(--fg);
 }
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+nav a {
+  color: var(--accent);
+  text-decoration: none;
+  margin: 0 0.3rem;
+}
+nav a:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.intro a,
+.writing a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.back-home {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  border: none;
+  transition: opacity 0.2s ease;
+}
+.back-home:hover {
+  opacity: 0.8;
+}

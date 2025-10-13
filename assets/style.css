@@ -63,23 +63,22 @@ header {
   margin-bottom: 30px;
 }
 
-/* Logo icon (SVG) */
+/* Logo icon (inline SVG) */
 .logo-icon {
   width: 3rem;
   height: 3rem;
   vertical-align: middle;
   margin-right: 0.5rem;
-  transform: translateY(-0.1rem);
+  transform: translateY(-0.05rem);
   display: inline-block;
-  filter: invert(0%);   /* black for light mode */
-  transition: filter 0.2s ease-in-out;
-
+  color: #000; /* Light mode: black */
 }
 
-/* Optional: subtle color match in dark mode */
+/* Dark mode: white */
 html.dark .logo-icon {
-  filter: brightness(0.9) saturate(1.2);
+  color: #fff;
 }
+
 header h1 {
   margin: 0;
   font-size: 1.8rem;

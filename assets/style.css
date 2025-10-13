@@ -1,6 +1,6 @@
 /* ============================
    Cactus — Minimal CSS
-   (no underline links, dark toggle via body.dark)
+   (no underline links, dark toggle via html.dark)
    ============================ */
 
 /* ---------- Theme Tokens (Light default) ---------- */
@@ -13,7 +13,7 @@
 }
 
 /* Dark theme variables (applied when body has .dark) */
-body.dark {
+html.dark {
   --bg: #1a1a1a;
   --fg: #e5e5e5;
   --muted: #9ca3af;

@@ -5,17 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{ page.title }} — {{ site.title }}</title>
 
-  <!-- Default to dark unless user explicitly chose light -->
+  <!-- Default to dark mode unless user explicitly chose light -->
   <script>
+    // This must run before CSS loads
     (function () {
       const pref = localStorage.getItem('theme');
-      if (pref !== 'light') document.body.classList.add('dark'); // <-- use BODY
+      if (pref === 'light') {
+        document.documentElement.classList.remove('dark');
+      } else {
+        document.documentElement.classList.add('dark');
+      }
     })();
   </script>
 
-  <link rel="stylesheet" href="{{ '/assets/style.css?v=3' | relative_url }}" />
+  <link rel="stylesheet" href="{{ '/assets/style.css?v=5' | relative_url }}" />
 </head>
-<body>
+<body class="">
   <header>
     <h1><a href="{{ '/' | relative_url }}">🌵 {{ site.title }}</a></h1>
     <nav>
@@ -34,14 +39,14 @@
 
   <script>
     const toggle = document.getElementById('theme-toggle');
-    const body = document.body;
+    const html = document.documentElement;
 
-    // Set the correct icon on load
-    toggle.textContent = body.classList.contains('dark') ? '☀' : '☾';
+    // Set initial icon
+    toggle.textContent = html.classList.contains('dark') ? '☀' : '☾';
 
-    // Manual toggle
+    // Toggle dark/light
     toggle.addEventListener('click', () => {
-      const isDark = body.classList.toggle('dark'); // <-- toggle BODY
+      const isDark = html.classList.toggle('dark');
       toggle.textContent = isDark ? '☀' : '☾';
       localStorage.setItem('theme', isDark ? 'dark' : 'light');
     });

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ page.title }} — {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}" />
+</head>
+<body>
+  <header>
+    <h1>🌵 {{ site.title }}</h1>
+    <nav>
+      <a href="{{ '/' | relative_url }}">Rants and Rambles</a> |
+      <a href="#">Photography</a>
+    </nav>
+    <button id="theme-toggle" class="theme-toggle">☾</button>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer>
+    <p>© {{ site.time | date: "%Y" }} {{ site.title }}</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    if (localStorage.getItem('theme') === 'dark') {
+      body.classList.add('dark');
+      toggle.textContent = '☀';
+    }
+    toggle.addEventListener('click', () => {
+      const dark = body.classList.toggle('dark');
+      toggle.textContent = dark ? '☀' : '☾';
+      localStorage.setItem('theme', dark ? 'dark' : 'light');
+    });
+  </script>
+</body>
+</html>

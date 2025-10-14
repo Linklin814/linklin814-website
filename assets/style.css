@@ -160,6 +160,10 @@ h2 {
   border-bottom: 1px dotted var(--rule);
 }
 
+.writing li:last-child {
+  border-bottom: none;
+}
+
 .writing li span {
   min-width: 120px;
   color: var(--muted);

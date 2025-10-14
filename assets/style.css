@@ -39,6 +39,13 @@ body {
   margin-inline: auto;
 }
 
+/* ---------- Let browser handle default heading sizes ---------- */
+h1, h2, h3, h4, h5, h6 {
+  all: revert;          /* revert to user-agent defaults */
+  font-family: inherit; /* keep your Meslo font */
+  color: inherit;       /* follow your --fg or --accent if wrapped */
+}
+
 /* Prevent images and videos from overflowing */
 img, video {
   max-width: 100%;

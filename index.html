@@ -12,7 +12,6 @@ title: Home
   {% endcapture %}
 
   <section class="{{ section }}">
-    <h2>{{ section | capitalize }}</h2>
     {{ section_content | markdownify }}
   </section>
 {% endfor %}

@@ -4,3 +4,8 @@ title: Iliyan Jivraj
 plugins:
   - jekyll-last-modified-at
 markdown: kramdown
+collections:
+
+  sections:
+    output: true
+    sort_by: order

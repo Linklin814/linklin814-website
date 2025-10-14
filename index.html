@@ -3,12 +3,16 @@ layout: default
 title: Home
 ---
 
-{% for section in "about,hobbies" | split: "," %}
-  {% capture md %}{% include sections/{{ section }}.md %}{% endcapture %}
-  <section class="{{ section }}">
-    {{ md | markdownify }}
-  </section>
+
+
+{% for section in site.sections %}
+<section class="{{ section.title | downcase | replace: ' ', '-' }}">
+  <h2>{{ section.title }}</h2>
+  {{ section.content | markdownify }}
+</section>
 {% endfor %}
+
+
 
 <section class="writing">
   <h2>Rants and Rambles</h2>

@@ -52,7 +52,30 @@
       const isDark = html.classList.toggle('dark');
       toggle.textContent = isDark ? '☀' : '☾';
       localStorage.setItem('theme', isDark ? 'dark' : 'light');
+
+      // Update theme-color meta on toggle
+      setThemeColor(isDark ? darkHex : lightHex);
     });
+  </script>
+
+  <!-- theme-color helper (placed just before </body>) -->
+  <script>
+    const themeMeta = () => document.querySelector('meta[name="theme-color"]');
+    const setThemeColor = (hex) => {
+      let m = themeMeta();
+      if (!m) {
+        m = document.createElement('meta');
+        m.name = 'theme-color';
+        document.head.appendChild(m);
+      }
+      m.setAttribute('content', hex);
+    };
+
+    const darkHex = '#1d1e21';
+    const lightHex = '#ffffff';
+
+    // Set initial theme-color on load
+    setThemeColor(document.documentElement.classList.contains('dark') ? darkHex : lightHex);
   </script>
 </body>
 </html>

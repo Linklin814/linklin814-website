@@ -3,6 +3,6 @@ title: "About Me"
 order: 1
 ---
 
-Hi, I'm Iliyan — an undergrad studying Politics and International Relations, based in London.
+Hi, I'm Anna — an Electrical Engineer working in hardware Cyber secturity.
 
-I've been into technology for ages, from when I was a baby smashing laptops with a hammer to now with a mini server cluster at home. I self-host a ton of services for personal use as well as a 3-node Proxmox cluster.
+In addition to hardware cybersecturity, I have experience in manufacturing, controls, testing & validation, and microelectronics. 

@@ -18,7 +18,7 @@ I love soldering and have gotten much better since this first project many years
 
 
 # Specs
-- penicl
+- pencil
 - copper tape
 - random PCB
 - zip ties

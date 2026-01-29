@@ -6,7 +6,7 @@ html.dark { color-scheme: dark; }    /* when your dark class is active */
   --bg: #ffffff;
   --fg: #1f2937;
   --muted: #6b7280;
-  --accent: #34d399;   /* green accent */
+  --accent: #ED6813;   /* green accent */
   --rule: #e5e5e5;
 }
 

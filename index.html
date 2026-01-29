@@ -15,7 +15,16 @@ title: Home
 
 
 <section class="writing">
-  <h2>Projects</h2>
+  <h2>Technical Projects</h2>
+  <ul>
+    {% for post in site.posts %}
+      <li>
+        <span>{{ post.date | date: "%d %b %Y" }}</span>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  <h2>Crafting Projects</h2>
   <ul>
     {% for post in site.posts %}
       <li>

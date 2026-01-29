@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: craft
 title: "test"
 date: 2025-10-13
 ---

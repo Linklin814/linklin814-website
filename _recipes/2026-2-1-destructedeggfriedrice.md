@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Deconstructed Egg-Fried Rice"
+title: "Deconstructed Egg Fried Rice"
 date: 2026-2-1
 ---
 
-# Classic Sheet Pan Dinner
+# Deconstructed Egg Fried Rice
 > **Ingredients**
 > 2-3 eggs<br>
 > 1/2 cup frozen veggies (of your choice)<br>

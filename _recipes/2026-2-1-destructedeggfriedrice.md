@@ -14,7 +14,7 @@ date: 2026-2-1
 > sprinkle red chilli flakes<br>
 > 1 tbsp soy sauce<br>
 > 1 tsp lime juice<br>
-> drizzle sirachia
+> drizzle sirachia<br>
 {: .admonition .info }
 
 ## Instructions

@@ -5,7 +5,6 @@ date: 2026-2-1
 ---
 
 # Lemon Pepper Pasta
-
 > **Ingredients**
 > 1 cup pasta (of your choice) <br>
 > 1.5 Tbsp salt-free lemon pepper sesasoning <br>
